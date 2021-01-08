@@ -1,0 +1,84 @@
+
+.footer {
+  background-color: $dark;
+}
+
+.footer-title {
+  font-size: 23px;
+  line-height: 33px;
+  color: #FFF;
+  font-weight: 600;
+  margin-bottom: 80px;
+
+  i {
+    color: $grey;
+  }
+  @include phone {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 15px;
+  }
+}
+
+.footer-sections-container {
+  display: flex;
+  justify-content: space-between;
+  @include phone {
+    justify-content: unset;
+    flex-direction: column;
+  }
+}
+
+.footer-section {
+  max-width: 290px;
+  width: 100%;
+  @include phone {
+    width: 100%;
+  }
+}
+.footer-address {
+  line-height: 36px;
+  @include phone {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 24px;
+  }
+}
+.footer-link {
+  @include flex-align-center;
+  transition: $tr;
+  margin-bottom: 19px;
+
+  &:hover {
+    color: $red;
+
+    svg {
+      path {
+        fill: $red;
+      }
+      rect {
+        stroke: $red;
+      }
+    }
+  }
+
+  svg {
+    width: 27px;
+    margin-right: 17px;
+
+    @include phone {
+      width: 22px;
+      margin-right: 19px;
+    }
+
+    path {
+      fill: $grey;
+      transition: $tr;
+    }
+
+    rect {
+      transition: $tr;
+      stroke: $grey;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+header {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+
+  &:not(.active){
+    mix-blend-mode: difference;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+}
+
+.btn-menu {
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 23px;
+  transition: $tr;
+
+  &.active {
+    width: 26px;
+    height: 26px;
+    z-index: 100;
+
+    &::before, &::after {
+      border-color: $red;
+    }
+    &::before {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+    &::after {
+      top: 50%;
+      bottom: unset;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+    .line {
+      opacity: 0;
+    }
+  }
+
+  &::after, &::before {
+    content: '';
+  }
+
+  .line, &::after, &::before {
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #FFF;
+    transition: $tr;
+    position: absolute;
+    left: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &:hover .line, &:hover::after, &:hover::before {
+    border-color: $red;
+  }
+}
+
+
+.header-menu {
+  background: rgba(18, 18, 18, 0.6);
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  transition: $tr;
+  opacity: 0;
+  visibility: hidden;
+
+  .container {
+    @include phone{
+      justify-content: unset;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    & .header-menu-list {
+      transform: translateX(0);
+    }
+  }
+
+  &-list {
+    padding: 60px 10px 0 0;
+    transition: $tr;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transform: translateX(100%);
+    color: $dark;
+
+    &::after {
+      display: block;
+      content: '';
+      height: 100%;
+      width: 100vw;
+      background-color: #FFF;
+      top: 0;
+      position: absolute;
+      z-index: -1;
+      margin-left: -43px;
+      @include phone {
+        width: calc(100% + 25px);
+        margin-left: -22px;
+      }
+    }
+    @include phone {
+      padding: 50px 10px 20px;
+      width: 100%;
+    }
+  }
+
+  &-link {
+    @include flex-align-center;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include phone {
+      font-size: 16px;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      margin-right: 15px;
+    }
+  }
+
+  &-item {
+    margin-bottom: 30px;
+    transition: $tr;
+
+    &:hover {
+      color: $red
+    }
+
+    &:last-child {
+      margin-top: auto;
+    }
+  }
+}

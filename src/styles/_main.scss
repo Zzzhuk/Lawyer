@@ -1,0 +1,305 @@
+.main-section {
+  background: url('../img/bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+
+  .text {
+    color: $white;
+    margin-top: 25px;
+    @include phone {
+      margin-top: 10px;
+    }
+  }
+
+  @include phone {
+    text-align: left;
+  }
+}
+
+.second-section, .third-section, .fourth-section, .seventh-section {
+  background: #000 url('../img/lines.svg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  .container, .min-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .text {
+    color: $grey;
+    margin-top: 25px;
+    @include phone {
+      margin-top: 10px;
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 33px;
+    @include phone {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+}
+
+.third-section {
+  background: $bg;
+  color: $dark;
+}
+
+.fourth-section {
+  .container {
+    @include flex-align-center;
+    @include phone {
+      align-items: stretch;
+      flex-direction: column;
+    }
+  }
+
+  .text {
+    color: $white
+  }
+
+  .description {
+    color: $grey;
+    margin: 5px 0 40px;
+    @include phone {
+      margin-bottom: 25px;
+    }
+  }
+
+  &-description-container {
+    flex: 1;
+  }
+
+  &-photo-container {
+    flex: 1;
+    padding-right: 74px;
+  }
+}
+
+.fifth-section {
+  background: $bg;
+  text-align: center;
+
+  .title {
+    color: $dark;
+    margin-bottom: 5px;
+  }
+
+  canvas {
+    background-color: #fff;
+    margin-top: 80px;
+    border-radius: 4px;
+    @include phone {
+      margin-top: 40px;
+    }
+  }
+}
+
+.download-pdf {
+  @include flex-align-center;
+  margin: 40px auto 0;
+  transition: $tr;
+
+  &:hover {
+    color: $red;
+
+    svg path {
+      fill: $red
+    }
+
+    span {
+      border-color: $red;
+    }
+  }
+
+  svg {
+    width: 23px;
+    height: 30px;
+    margin-right: 14px;
+
+    path {
+      transition: $tr;
+    }
+  }
+
+  span {
+    transition: $tr;
+    border-bottom: 1px solid $grey;
+    @include phone {
+      border-bottom: none;
+      text-align: left;
+    }
+  }
+
+  @include phone {
+    align-items: flex-start;
+  }
+}
+
+.sixth-section, .eighth-section {
+  background-color: #F4F4F4;
+  text-align: center;
+  .container, .min-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .title {
+    color: $dark;
+    margin-bottom: 80px;
+    @include phone {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.section-table {
+  @include phone {
+    margin: 0 -11px;
+  }
+  li {
+    border-top: 1px solid #DDD;
+    padding: 18px 39px;
+    font-size: 20px;
+    display: flex;
+    text-align: left;
+
+    @include phone {
+      font-size: 16px;
+      padding: 15px;
+      flex-direction: column;
+    }
+
+    &:nth-child(2n+1) {
+      background-color: #EFEFEF;
+    }
+
+    .cell {
+      flex: 1;
+      margin-right: 24px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include phone {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .table-text {
+    color: $dark;
+    font-weight: 600;
+    @include phone {
+      margin-top: 5px;
+    }
+  }
+}
+
+.seventh-section {
+  text-align: center;
+}
+
+.algorithms-container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  @include phone {
+    margin-top: 40px;
+    justify-content: unset;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.algorithms-item {
+  max-width: 328px;
+  width: 100%;
+  text-align: center;
+  @include phone {
+    margin-bottom: 40px;
+  }
+}
+
+.algorithms-icon-container {
+  @include flex-center;
+  margin: 0 auto 38px;
+  background: rgba(250, 82, 85, 0.48);
+  box-shadow: 1px 4px 15px 1px rgba(0, 0, 0, 0.15);
+  width: 114px;
+  height: 114px;
+  position: relative;
+  border-radius: 50%;
+
+  svg {
+    width: 49px;
+  }
+
+  span {
+    @include flex-center;
+    width: 39px;
+    height: 39px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    color: $dark;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.algorithms-title {
+  font-size: 23px;
+  line-height: 33px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.algorithms-descr {
+  color: $grey;
+}
+
+.advantages-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -12px;
+  @include phone {
+    margin: 0;
+    flex-direction: column;
+  }
+}
+
+.advantages-item {
+  background-color: #fff;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  margin: 12px;
+  width: calc(50% - 24px);
+  padding: 30px 25px;
+  text-align: left;
+  @include phone {
+    margin: 0 0 20px;
+    padding: 17px 20px;
+    width: 100%;
+  }
+}
+
+.advantage-title {
+  font-size: 23px;
+  font-weight: 600;
+  color: $dark;
+  line-height: 33px;
+  margin-bottom: 15px;
+  @include phone {
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 23px;
+  }
+}

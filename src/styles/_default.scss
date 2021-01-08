@@ -1,0 +1,96 @@
+body, html {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  overflow: hidden !important;
+  color: $grey;
+  @include phone {
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+
+.toanimate {
+  visibility: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 11px;
+  margin: 0 auto;
+}
+
+.min-container {
+  max-width: 752px;
+  padding: 0 11px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 70px;
+
+  @include phone {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+#fp-nav.fp-right {
+  @include phone {
+    right: 5px;
+  }
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  z-index: 100000;
+  height: 100%;
+  background-color: #fff;
+  @include flex-center;
+
+  svg {
+    transition: 10s linear;
+    width: 233px;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+    @include phone {
+      width: 136px;
+    }
+  }
+}
+
+@-moz-keyframes spin {
+  50% {
+    -moz-transform: rotate(180deg) scale(.7);
+  }
+  100% {
+    -moz-transform: rotate(360deg) scale(1);
+  }
+}
+
+@-webkit-keyframes spin {
+  50% {
+    -webkit-transform: rotate(180deg) scale(.7);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes spin {
+  50% {
+    -webkit-transform: rotate(180deg) scale(.7);
+    transform: rotate(180deg) scale(.7);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+
