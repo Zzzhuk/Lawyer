@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -15,15 +16,40 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="robots" content="index, nofollow">
   <meta name="keywords" content="EasyGase,Акции, Облигации, фонд, инвестиции, ценные бумаги">
-  <meta name="description" content="EasyGase Real Estate & Securities International Fund (RESIF) - это Международный Фонд, который занимается инвестициями на фондовых рынках, в
-      безопасные и ликвидные ценные бумаги - REITs, Акции, Облигации, ETF и другие устойчивые ценные бумаги.">
+  <meta name="description"
+        content="Международный Инвестиционный Фонд, который занимается инвестициями на фондовых рынках в безопасные, ликвидные, устойчивые ценные бумаги.">
+  <style>
+      #preloader {
+          position: fixed;
+          width: 100%;
+          z-index: 100000;
+          height: 100%;
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          /*@include flex-center;*/
+      }
+      #preloader svg {
+          transition: 10s linear;
+          width: 233px;
+          -webkit-animation: spin 4s linear infinite;
+          -moz-animation: spin 4s linear infinite;
+          animation: spin 4s linear infinite;
+
+      /*@include phone {*/
+      /*    width: 136px;*/
+      /*}*/
+      /*}*/
+      }
+  </style>
 </head>
 <body>
 <div id="preloader">
   <img inline src="./src/icons/preloader.svg">
 </div>
 <header>
-  <div class="container">
+  <div class="btn-container">
     <button class="btn-menu toggle" id="toggleMenu">
       <span class="line"></span>
     </button>
@@ -31,28 +57,27 @@
   <div class="header-menu" id="headerMenu">
     <div class="container">
       <ul class="header-menu-list">
-        <li data-menuanchor="firstPage" class="header-menu-item">
+        <li data-menuanchor="fund" class="header-menu-item">
           <a href="#fund" class="toggle header-menu-link">Фонд</a>
         </li>
-        <li data-menuanchor="firstPage" class="header-menu-item">
+        <li data-menuanchor="ceo" class="header-menu-item">
           <a href="#ceo" class="toggle header-menu-link">Управляющий активами</a>
         </li>
-        <li data-menuanchor="firstPage" class="header-menu-item">
-          <a href="#income" class="toggle header-menu-link">Доходность</a>
-        </li>
-        <li data-menuanchor="firstPage" class="header-menu-item">
+        <li data-menuanchor="parameters" class="header-menu-item">
           <a href="#parameters" class="toggle header-menu-link">Параметры фонда</a>
         </li>
-        <li data-menuanchor="firstPage" class="header-menu-item">
+        <li data-menuanchor="algorithm" class="header-menu-item">
           <a href="#algorithm" class="toggle header-menu-link">Алгоритм инвестирования</a>
         </li>
-        <li data-menuanchor="firstPage" class="header-menu-item">
+        <li data-menuanchor="advantages" class="header-menu-item">
           <a href="#advantages" class="toggle header-menu-link">Наши преимущества</a>
         </li>
         <li class="header-menu-item">
-          <a href="https://wa.me/447391127278" target="_blank" class="header-menu-link">
-            <img inline src="./src/icons/whatsapp.svg">
-            <span>Связь в WhatsUp</span>
+          <a href="https://wa.me/447391127278" target="_blank" class="social-link whatsapp">
+            Связаться в WhatsApp
+            <span class="social-icon whatsapp">
+              <img inline src="./src/icons/whatsapp.svg">
+            </span>
           </a>
         </li>
       </ul>
@@ -61,38 +86,71 @@
 </header>
 <main id="fullpage">
   <section class="section main-section">
-    <div class="min-container">
-      <h1 class="title toanimate" data-animate="flipInX">
-        EasyGase Real Estate & Securities International Fund
+    <video loop muted id="video">
+      <source src="videos/bg.mp4" type="video/mp4">
+      <source src="videos/bg_mob.mp4" type="video/mp4" media="all and (max-width: 768px)">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container">
+      <h1 class="title">
+        <span><i>E</i>asy<i>G</i>ase <i>R</i>eal <i>E</i>state & <i>S</i>ecurities</span>
+        <span><i>I</i>nternational <i>F</i>und</span>
       </h1>
-      <p class="text toanimate" data-animate="flipInX">Легко получить полный сервис при инвестировании в ценные
-        бумаги</p>
+      <p class="text">
+        Легко получить полный сервис
+        <br>при инвестировании в ценные бумаги
+      </p>
     </div>
   </section>
   <section class="section second-section">
-    <div class="min-container">
-      <p class="title toanimate" data-animate="fadeInDown">
-        EasyGase Real Estate & Securities International Fund (RESIF) - это Международный Фонд, который занимается
-        инвестициями на фондовых рынках, в безопасные и ликвидные ценные бумаги - REITs, Акции, Облигации, ETF и другие
-        устойчивые ценные бумаги.
-      </p>
-      <p class="text toanimate" data-animate="fadeInUp">Целью Фонда является получение Прибыли, сохранить и
-        приумножить Ваш капитал, с предоставлением отличного Сервиса, причём вне зависимости от Вашего местонахождения,
-        возраста и рода занятий - персональный менеджер, бесплатные комплексные консультации, платформа работающая на
-        русском языке, индивидуальное сопровождение по оформлению и другим вопросам.</p>
+    <div class="container">
+      <div class="fund-block">
+        <p class="title toanimate" data-animate="animate__fadeInUp">
+          <i>E</i>asy<i>G</i>ase<br><i>R</i>eal <i>E</i>state & <i>S</i>ecurities <br><i>I</i>nternational <i>F</i>und <i>(RESIF)</i>
+        </p>
+        <p class="text undertitle toanimate" data-delay="300" data-animate="animate__fadeInUp">
+          Международный Фонд который занимается инвестициями на фондовых рынках в безопасные <br>и ликвидные ценные бумаги
+          - REITs, Акции, Облигации, ETF и другие устойчивые ценные бумаги.
+        </p>
+      </div>
+      <div class="fund-block">
+        <p class="text toanimate" data-delay="600" data-animate="animate__fadeInUp">
+          <strong>Целью Фонда</strong> является получение Прибыли, сохранить и приумножить Ваш капитал, с
+          предоставлением отличного
+          Сервиса, причём вне зависимости от Вашего местонахождения, возраста и рода занятий - персональный менеджер,
+          бесплатные комплексные консультации, платформа работающая на русском языке, индивидуальное сопровождение по
+          оформлению и другим вопросам.
+        </p>
+        <p class="text toanimate" data-delay="900" data-animate="animate__fadeInUp">
+          <strong>Инвестиционная Стратегия,</strong> - заключается в максимизации прироста капитала за счет торговли
+          высококачественными
+          ценными бумагами при минимальном риске; без ограничений по индустрии и географии; цель - более 15% годовых в
+          USD; риск распределён по десяткам эмитентов и компенсирован детальным анализом каждой бумаги; образующиеся
+          свободные средства (дивиденды, купоны и другие) - реинвестируются.
+        </p>
+        <p class="text toanimate" data-delay="1200" data-animate="animate__fadeInUp">
+          <strong>Инвестирование в фондовый рынок</strong> через правильный и понимаемый инвестиционный Фонд -
+          <span><i>E</i>asy<i>G</i>ase<br><i>R</i>eal <i>E</i>state & <i>S</i>ecurities <i>I</i>nternational <i>F</i>und <i>(RESIF)</i></span>,
+          - это самое лучшее решение для любого инвестора, и выполняется напрямую от
+          частного лица или компании, через брокерский счёт, это лучшая альтернатива валютному депозиту, или покупке
+          недвижимости на падающих рынках, потому что Фонд - доходнее, ликвиднее, удобнее, и сразу предоставляет все
+          лучшие решения, для безопасного и прибыльного инвестирования.
+        </p>
+      </div>
     </div>
   </section>
-  <section class="section third-section">
+  <section class="third-section">
     <div class="min-container">
-      <p class="title toanimate" data-animate="fadeIn">
+      <p class="text toanimate" data-animate="animate__fadeInUp">
         Инвестиционная Стратегия - заключается в максимизации прироста капитала за счет торговли высококачественными
         ценными бумагами при минимальном риске; без ограничений по индустрии и географии; цель - более 15% годовых в
         USD; риск распределён по десяткам эмитентов и компенсирован детальным анализом каждой бумаги; образующиеся
         свободные средства (дивиденды, купоны и другие) - реинвестируются.
       </p>
-      <p class="text toanimate" data-delay="100" data-animate="fadeIn">
-        Инвестирование в фондовый рынок через правильный и понимаемый инвестиционный Фонд - EasyGase Real Estate &
-        Securities International Fund, - это самое лучшее решение для любого инвестора, и выполняется напрямую от
+      <p class="text toanimate" data-delay="100" data-animate="animate__fadeInUp">
+        Инвестирование в фондовый рынок через правильный и понимаемый инвестиционный Фонд -
+        <span><i>E</i>asy<i>G</i>ase<br><i>R</i>eal <i>E</i>state & <i>S</i>ecurities <i>I</i>nternational <i>F</i>und <i>(RESIF)</i></span>,
+        - это самое лучшее решение для любого инвестора, и выполняется напрямую от
         частного лица или компании, через брокерский счёт, это лучшая альтернатива валютному депозиту, или покупке
         недвижимости на падающих рынках, потому что Фонд - доходнее, ликвиднее, удобнее, и сразу предоставляет все
         лучшие решения, для безопасного и прибыльного инвестирования.
@@ -102,40 +160,28 @@
   <section class="fourth-section section">
     <div class="container">
       <div class="fourth-section-photo-container">
-
+        <img src="img/photo.jpg" alt="Mr. Denys Svystukhin" class="toanimate" data-animate="animate__fadeInUp">
       </div>
       <div class="fourth-section-description-container">
-        <h2 class="toanimate" data-animate="fadeIn">Mr. Denys Svystukhin</h2>
-        <p class="description toanimate" data-delay="50" data-animate="fadeInDown">Управляющий активами Фонда, СЕО</p>
-        <p class="text toanimate" data-delay="100" data-animate="fadeInDown">Имеет более 25 лет профессионального опыта
-          инвестиционной и
-          управленческой практики,</p>
-        <p class="text toanimate" data-delay="300" data-animate="fadeInDown">Адвокат (1998),</p>
-        <p class="text toanimate" data-delay="500" data-animate="fadeInDown">Сертифицирован The Chartered Institute of
-          Arbitrators
-          (Лондон, 2004).</p>
-        <p class="text toanimate" data-delay="700" data-animate="fadeInDown">Магистр технических наук, права и
-          управления.</p>
+        <h2 class="title toanimate" data-animate="animate__fadeIn">
+          <span>Управляющий активами, СЕО</span>
+        </h2>
+        <p class="text toanimate" data-delay="300" data-animate="animate__fadeInUp">
+          <span>Mr. Denys Svystukhin</span> — более 25 лет профессионального опыта инвестиционной и управленческой
+          практики, <br>
+          Адвокат (1998),
+          Сертифицирован The Chartered Institute of <br>
+          Arbitrators (Лондон, 2004).
+        </p>
+        <p class="text toanimate" data-delay="600" data-animate="animate__fadeInUp">Магистр технических наук, права и
+          управления. </p>
       </div>
-    </div>
-  </section>
-  <section class="fifth-section section">
-    <div class="min-container">
-      <h2 class="title toanimate" data-animate="fadeInDown">Доходность Фонда</h2>
-      <p class="toanimate" data-animate="fadeInDown">за ноябрь 2020 года</p>
-      <div class="toanimate" data-animate="fadeInUp">
-        <canvas id="found" width="752" height="350"></canvas>
-      </div>
-      <button class="download-pdf toanimate" data-delay="500" data-animate="fadeIn">
-        <img inline src="./src/icons/pdf.svg">
-        <span>Ежемесячный отчет деятельности Фонда</span>
-      </button>
     </div>
   </section>
   <section class="sixth-section section">
     <div class="container">
-      <h2 class="title toanimate" data-animate="fadeInDown">Параметры Фонда</h2>
-      <ul class="section-table toanimate" data-animate="fadeInUp">
+      <h2 class="title toanimate" data-animate="animate__fadeInUp">Параметры Фонда</h2>
+      <ul class="section-table toanimate" data-animate="animate__fadeInUp">
         <li>
           <p class="cell table-title">Прайм-брокер</p>
           <p class="cell table-text">EXANTE</p>
@@ -161,51 +207,54 @@
           <p class="cell table-text">15% от прибыли</p>
         </li>
         <li>
-          <p class="cell table-title">Стоимость Акции Фонда обновляется в личном кабинете брокера</p>
+          <p class="cell table-title">Стоимость Акции Фонда обновляется <br>в личном кабинете брокера</p>
           <p class="cell table-text">Каждый понедельник</p>
         </li>
       </ul>
+      <button disabled class="download-pdf toanimate" data-delay="500" data-animate="fadeIn">
+        <img inline src="./src/icons/pdf.svg">
+        <span>Ежемесячный отчет о результатах деятельности Фонда</span>
+      </button>
     </div>
   </section>
   <section class="seventh-section section">
     <div class="container">
-      <h2 class="toanimate" data-animate="fadeIn">Алгоритм инвестирования</h2>
+      <h2 class="title toanimate" data-animate="animate__fadeInUp">Алгоритм инвестирования</h2>
       <div class="algorithms-container">
-        <div class="algorithms-item toanimate" data-animate="fadeInRight">
-          <div class="algorithms-icon-container">
-            <img inline src="./src/icons/exante.svg">
-            <span>1</span>
-          </div>
+        <div class="algorithms-item toanimate" data-animate="animate__fadeInUp">
+          <p class="algorithms-step-container">
+            1
+          </p>
           <p class="algorithms-title">
             Открыть брокерский счет в EXANTE
           </p>
           <p class="algorithms-descr">
-            Регистрация по этой ссылке: <a href="https://exante.eu/ru/#open-an-account" target="_blank">https://exante.eu/ru/#open-an-account</a>
+            Регистрация по этой ссылке:
+            <a href="https://exante.eu/ru/#open-an-account"
+               target="_blank">https://exante.eu/p/15873/#open-an-account</a>
             сразу предоставит Вам персонального менеджера 24/7
           </p>
         </div>
-        <div class="algorithms-item toanimate" data-animate="fadeInUp">
-          <div class="algorithms-icon-container">
-            <img inline src="./src/icons/download.svg">
-            <span>2</span>
-          </div>
+        <div class="algorithms-item toanimate" data-delay="300" data-animate="animate__fadeInUp">
+          <p class="algorithms-step-container">
+            2
+          </p>
           <p class="algorithms-title">
-            Пополнить свой брокерский свет
+            Пополнить свой брокерский счет
           </p>
           <p class="algorithms-descr">
             Не менее чем на 10 000 евро — минимум для открытия счета в EXANTE
           </p>
         </div>
-        <div class="algorithms-item toanimate" data-animate="fadeInLeft">
-          <div class="algorithms-icon-container">
-            <img inline src="./src/icons/cart.svg">
-            <span>3</span>
-          </div>
+        <div class="algorithms-item toanimate" data-delay="600" data-animate="animate__fadeInUp">
+          <p class="algorithms-step-container">
+            3
+          </p>
           <p class="algorithms-title">
             Купить акции Фонда
           </p>
           <p class="algorithms-descr">
-            Находите Тикер Фонда (RESIF) в торговой платформе EXANTE и покупаете/продаете ации Фонда
+            Находите Тикер Фонда (RESIF) в торговой платформе <br> EXANTE и покупаете/продаете Акции Фонда
           </p>
         </div>
       </div>
@@ -213,60 +262,107 @@
   </section>
   <section class="eighth-section section">
     <div class="container">
-      <h2 class="title toanimate" data-animate="fadeInDown">Наши Преимущества</h2>
+      <h2 class="title toanimate" data-animate="animate__fadeInUp">Наши Преимущества</h2>
       <div class="advantages-container">
-        <div class="advantages-item toanimate" data-animate="fadeInLeft">
-          <h3 class="advantage-title">Безопасная стратегия</h3>
-          <p class="advantage-descr">Позволяет сохранять и приумножать капитал, как в периоды роста, так и в периоды
-            нестабильности</p>
-        </div>
-        <div class="advantages-item toanimate" data-delay="100" data-animate="fadeInRight">
+        <div class="advantages-item toanimate"  data-animate="animate__fadeInUp">
+          <div class="advantage-icon">
+            <img inline src="./src/icons/security.svg">
+          </div>
           <h3 class="advantage-title">Средства инвесторов защищены</h3>
           <p class="advantage-descr">Вся инвестиционная деятельность Фонда и брокера Exante, регулируется европейским
             законодательством, защищающим активы клиентов, и просто невозможно использовать не по назначению или
             присвоить деньги клиентов</p>
         </div>
-        <div class="advantages-item toanimate" data-delay="200" data-animate="fadeInLeft">
-          <h3 class="advantage-title">Высокая ликвидность</h3>
-          <p class="advantage-descr">Средства инвестируются только в ликвидные продукты, и поэтому заявки инвесторов по
-            выводу средств, выполняются в течение 5 дней</p>
-        </div>
-        <div class="advantages-item toanimate" data-delay="300" data-animate="fadeInRight">
+        <div class="advantages-item toanimate" data-delay="100" data-animate="animate__fadeInUp">
+          <div class="advantage-icon">
+            <img inline src="./src/icons/week.svg">
+          </div>
           <h3 class="advantage-title">Максимальный сервис</h3>
           <p class="advantage-descr">Персональный менеджер 24/7, комплексные и бесплатные консультации Управляющего
             Фондом, возможность инвестировать в Фонд от физического или юридического лица, находясь в любой точке
             Мира</p>
+        </div>
+        <div class="advantages-item toanimate" data-delay="200" data-animate="animate__fadeInUp">
+          <div class="advantage-icon">
+            <img inline src="./src/icons/mob.svg">
+          </div>
+          <h3 class="advantage-title">Высокая ликвидность</h3>
+          <p class="advantage-descr">Средства инвестируются только в ликвидные продукты, и поэтому заявки инвесторов по
+            выводу средств, выполняются в течение 5 дней</p>
+        </div>
+        <div class="advantages-item toanimate"data-delay="300" data-animate="animate__fadeInUp">
+          <div class="advantage-icon">
+            <img inline src="./src/icons/fin.svg">
+          </div>
+          <h3 class="advantage-title">Безопасная стратегия</h3>
+          <p class="advantage-descr">Позволяет сохранять и приумножать капитал, как в периоды роста, так и в периоды
+            нестабильности</p>
         </div>
       </div>
     </div>
   </section>
   <section class="footer section">
     <div class="container">
-      <h4 class="footer-title">EasyGase Real Estate <i>& Securities International Fund</i></h4>
+      <a href="#main" class="footer-title">
+        <i>E</i>asy<i>G</i>ase <i>R</i>eal <i>E</i>state & <i>S</i>ecurities <i>I</i>nternational <i>F</i>und
+      </a>
+      <p class="footer-description">
+        Легко получить полный сервис
+        <br>при инвестировании в ценные бумаги
+      </p>
       <div class="footer-sections-container">
-        <a href="https://goo.gl/maps/xSFzHrA9W3ZNhetn9" target="_blank" class="footer-address footer-section">
-          United Kingdom, London
-          The Caduceus, Hardwick Lane
-          Surrey KT16 0AA
-        </a>
         <div class="footer-section">
-          <a href="tel:+44 7391 127 278" class="footer-link">
-            <img inline src="./src/icons/phone.svg">
-            +44 7391 127 278
-          </a>
-          <a href="mailto:resif@easygase.com" class="footer-link">
-            <img inline src="./src/icons/mail.svg">
-            resif@easygase.com
-          </a>
+          <h4 class="footer-section-title">Офис</h4>
+          <ul class="footer-menu">
+            <li class="footer-menu-item">
+              <p class="footer-menu-link">
+                United Kingdom, London <br>
+                The Caduceus, Hardwick Lane <br>
+                Surrey KT16 0AA
+              </p>
+            </li>
+            <li class="footer-menu-item">
+              <a href="tel:+44 7391 127 278" class="footer-menu-link contacts">
+                +44 7391 127 278
+              </a>
+            </li>
+            <li class="footer-menu-item">
+              <a href="mailto:resif@easygase.com" class="footer-menu-link contacts">
+                resif@easygase.com
+              </a>
+            </li>
+          </ul>
+
+
         </div>
         <div class="footer-section">
-          <a href="https://wa.me/447391127278" target="_blank" class="footer-link">
-            <img inline src="./src/icons/whatsapp.svg">
-            Связаться в WhatsApp
+          <a href="#fund" class="footer-menu-link footer-section-title">
+            Фонд
           </a>
-          <a href="https://facebook.com/" target="_blank" class="footer-link">
+          <ul class="footer-menu">
+            <li data-menuanchor="ceo" class="footer-menu-item">
+              <a href="#ceo" class="footer-menu-link">Управляющий активами</a>
+            </li>
+            <li data-menuanchor="parameters" class="footer-menu-item">
+              <a href="#parameters" class="footer-menu-link">Параметры фонда</a>
+            </li>
+            <li data-menuanchor="algorithm" class="footer-menu-item">
+              <a href="#algorithm" class="footer-menu-link">Алгоритм инвестирования</a>
+            </li>
+            <li data-menuanchor="advantages" class="footer-menu-item">
+              <a href="#advantages" class="footer-menu-link">Наши преимущества</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-section footer-social">
+          <a href="https://facebook.com" target="_blank" class="social-link social-icon facebook">
             <img inline src="./src/icons/facebook.svg">
-            Наша страница в Facebook
+          </a>
+          <a href="https://wa.me/447391127278" target="_blank" class="social-link whatsapp">
+            <span class="social-icon whatsapp">
+              <img inline src="./src/icons/whatsapp.svg">
+            </span>
+            Связаться в WhatsApp
           </a>
         </div>
       </div>

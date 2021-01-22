@@ -1,10 +1,11 @@
 body, html {
-  font-family: 'Inter', sans-serif;
-  font-size: 18px;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 16px;
   line-height: 26px;
   font-weight: 400;
-  overflow: hidden !important;
-  color: $grey;
+  overflow-x: hidden;
+  transition: $tr;
+  color: #FFF;
   @include phone {
     font-size: 16px;
     line-height: 23px;
@@ -16,7 +17,7 @@ body, html {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
   padding: 0 11px;
   margin: 0 auto;
 }
@@ -25,6 +26,19 @@ body, html {
   max-width: 752px;
   padding: 0 11px;
   margin: 0 auto;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 39px;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFF;
 }
 
 h1, h2 {
@@ -41,26 +55,6 @@ h1, h2 {
 #fp-nav.fp-right {
   @include phone {
     right: 5px;
-  }
-}
-
-#preloader {
-  position: fixed;
-  width: 100%;
-  z-index: 100000;
-  height: 100%;
-  background-color: #fff;
-  @include flex-center;
-
-  svg {
-    transition: 10s linear;
-    width: 233px;
-    -webkit-animation: spin 4s linear infinite;
-    -moz-animation: spin 4s linear infinite;
-    animation: spin 4s linear infinite;
-    @include phone {
-      width: 136px;
-    }
   }
 }
 

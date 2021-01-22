@@ -19,10 +19,10 @@ const plugins = [
   }),
   new CopyWebpackPlugin({
     patterns: [
-      {
-        from: './src/icons/',
-        to: './icons/'
-      },
+      // {
+      //   from: './src/icons/',
+      //   to: './icons/'
+      // },
       {
         from: './src/img/',
         to: './img/'
@@ -30,6 +30,10 @@ const plugins = [
       {
         from: './src/favicon/',
         to: ''
+      },
+      {
+        from: './src/videos/',
+        to: './videos/'
       },
     ]
   })
@@ -79,6 +83,18 @@ module.exports = (env, options) => {
           }
         },
         {
+          test: /\.mp4$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                publicPath: '../',
+                useRelativePaths: true
+              }
+            },
+          ],
+        },
+        {
           test: /\.(png|jpe?g|gif|svg)$/i,
           use: [
             {
@@ -97,6 +113,16 @@ module.exports = (env, options) => {
             devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
             "css-loader",
             "sass-loader",
+            {
+              loader: "postcss-loader",
+              options: {
+                postcssOptions: {
+                  plugins: [
+                    "postcss-preset-env",
+                  ],
+                },
+              },
+            },
           ]
         },
       ]
