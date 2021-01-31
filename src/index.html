@@ -11,11 +11,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#000000">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <meta name="robots" content="index, nofollow">
-  <meta name="keywords" content="EasyGase,Акции, Облигации, фонд, инвестиции, ценные бумаги">
+  <meta name="keywords"
+        content="Куда инвестировать деньги,Куда вложить миллион,Куда вложить,Инвестиционный Фонд,Купить недвижимость,Инвестиции в недвижимость,траст недвижимости,Инвестиции в ценные бумаги,Купить Ценные бумаги,Купить Акции,Инвестиции на фондовом,Паевый инвестиционный">
   <meta name="description"
         content="Международный Инвестиционный Фонд, который занимается инвестициями на фондовых рынках в безопасные, ликвидные, устойчивые ценные бумаги.">
   <style>
@@ -30,6 +31,7 @@
           justify-content: center;
           /*@include flex-center;*/
       }
+
       #preloader svg {
           transition: 10s linear;
           width: 233px;
@@ -37,10 +39,10 @@
           -moz-animation: spin 4s linear infinite;
           animation: spin 4s linear infinite;
 
-      /*@include phone {*/
-      /*    width: 136px;*/
-      /*}*/
-      /*}*/
+          /*@include phone {*/
+          /*    width: 136px;*/
+          /*}*/
+          /*}*/
       }
   </style>
 </head>
@@ -73,11 +75,9 @@
           <a href="#advantages" class="toggle header-menu-link">Наши преимущества</a>
         </li>
         <li class="header-menu-item">
-          <a href="https://wa.me/447391127278" target="_blank" class="social-link whatsapp">
-            Связаться в WhatsApp
-            <span class="social-icon whatsapp">
-              <img inline src="./src/icons/whatsapp.svg">
-            </span>
+          <a href="https://wa.me/447391127278" target="_blank" class="social-link whatsapp-icon">
+            <img inline src="./src/icons/whatsapp.svg">
+            <span>Связаться в WhatsApp</span>
           </a>
         </li>
       </ul>
@@ -86,7 +86,7 @@
 </header>
 <main id="fullpage">
   <section class="section main-section">
-    <video loop muted id="video">
+    <video loop muted id="video" preload="auto">
       <source src="videos/bg.mp4" type="video/mp4">
       <source src="videos/bg_mob.mp4" type="video/mp4" media="all and (max-width: 768px)">
       Your browser does not support the video tag.
@@ -96,6 +96,11 @@
         <span><i>E</i>asy<i>G</i>ase <i>R</i>eal <i>E</i>state & <i>S</i>ecurities</span>
         <span><i>I</i>nternational <i>F</i>und</span>
       </h1>
+      <h2 class="title mob">
+        <span><i>E</i>asy<i>G</i>ase</span>
+        <span><i>R</i>eal <i>E</i>state & <i>S</i>ecurities</span>
+        <span><i>I</i>nternational <i>F</i>und</span>
+      </h2>
       <p class="text">
         Легко получить полный сервис
         <br>при инвестировании в ценные бумаги
@@ -106,10 +111,12 @@
     <div class="container">
       <div class="fund-block">
         <p class="title toanimate" data-animate="animate__fadeInUp">
-          <i>E</i>asy<i>G</i>ase<br><i>R</i>eal <i>E</i>state & <i>S</i>ecurities <br><i>I</i>nternational <i>F</i>und <i>(RESIF)</i>
+          <i>E</i>asy<i>G</i>ase<br><i>R</i>eal <i>E</i>state & <i>S</i>ecurities <br><i>I</i>nternational <i>F</i>und
+          <i>(RESIF)</i>
         </p>
         <p class="text undertitle toanimate" data-delay="300" data-animate="animate__fadeInUp">
-          Международный Фонд который занимается инвестициями на фондовых рынках в безопасные <br>и ликвидные ценные бумаги
+          Международный Фонд который занимается инвестициями на фондовых рынках в безопасные <br>и ликвидные ценные
+          бумаги
           - REITs, Акции, Облигации, ETF и другие устойчивые ценные бумаги.
         </p>
       </div>
@@ -139,16 +146,17 @@
       </div>
     </div>
   </section>
-  <section class="third-section">
-    <div class="min-container">
+  <section class="third-section mobile-section">
+    <div class="container fund-block">
       <p class="text toanimate" data-animate="animate__fadeInUp">
-        Инвестиционная Стратегия - заключается в максимизации прироста капитала за счет торговли высококачественными
+        <strong>Инвестиционная Стратегия,</strong> - заключается в максимизации прироста капитала за счет торговли
+        высококачественными
         ценными бумагами при минимальном риске; без ограничений по индустрии и географии; цель - более 15% годовых в
         USD; риск распределён по десяткам эмитентов и компенсирован детальным анализом каждой бумаги; образующиеся
         свободные средства (дивиденды, купоны и другие) - реинвестируются.
       </p>
-      <p class="text toanimate" data-delay="100" data-animate="animate__fadeInUp">
-        Инвестирование в фондовый рынок через правильный и понимаемый инвестиционный Фонд -
+      <p class="text toanimate" data-delay="300" data-animate="animate__fadeInUp">
+        <strong>Инвестирование в фондовый рынок</strong> через правильный и понимаемый инвестиционный Фонд -
         <span><i>E</i>asy<i>G</i>ase<br><i>R</i>eal <i>E</i>state & <i>S</i>ecurities <i>I</i>nternational <i>F</i>und <i>(RESIF)</i></span>,
         - это самое лучшее решение для любого инвестора, и выполняется напрямую от
         частного лица или компании, через брокерский счёт, это лучшая альтернатива валютному депозиту, или покупке
@@ -160,25 +168,48 @@
   <section class="fourth-section section">
     <div class="container">
       <div class="fourth-section-photo-container">
-        <img src="img/photo.jpg" alt="Mr. Denys Svystukhin" class="toanimate" data-animate="animate__fadeInUp">
+        <img src="img/photo-min.webp" alt="Mr. Denys Svystukhin" class="toanimate" data-animate="animate__fadeInUp">
       </div>
       <div class="fourth-section-description-container">
-        <h2 class="title toanimate" data-animate="animate__fadeIn">
+        <h2 class="title toanimate" data-delay="300" data-animate="animate__fadeInUp">
           <span>Управляющий активами, СЕО</span>
         </h2>
-        <p class="text toanimate" data-delay="300" data-animate="animate__fadeInUp">
+        <p class="text toanimate" data-delay="600" data-animate="animate__fadeInUp">
           <span>Mr. Denys Svystukhin</span> — более 25 лет профессионального опыта инвестиционной и управленческой
-          практики, <br>
+          практики,
           Адвокат (1998),
-          Сертифицирован The Chartered Institute of <br>
+          Сертифицирован The Chartered Institute of
           Arbitrators (Лондон, 2004).
         </p>
-        <p class="text toanimate" data-delay="600" data-animate="animate__fadeInUp">Магистр технических наук, права и
+        <p class="text toanimate" data-delay="900" data-animate="animate__fadeInUp">Магистр технических наук, права и
           управления. </p>
+      </div>
+      <div class="author toanimate" data-delay="1200" data-animate="animate__fadeInUp">
+        <p class="text">"Фонд создан для того, чтобы помочь как можно большему числу людей, вне
+          зависимости от
+          их места проживания, - сохранить и приумножить свои деньги, с предоставлением отличного Сервиса!</p>
+        <p class="text">Наша безопасная стратегия инвестирования и принцип «нетерпимости к убыткам», -
+          позволяют держать на балансе только самые надёжные, ликвидные, и эффективные глобальные бумаги, - с отличными
+          рейтингами, отчётами, и управлением.</p>
+        <p class="text">Доходность Фонда за 2020 год составила +73% в USD , что намного выше инфляции,
+          доходов
+          от арендной недвижимости и банковских депозитов."</p>
       </div>
     </div>
   </section>
-  <section class="sixth-section section">
+  <section class="fourth-section-add mobile-section">
+    <div class="container author">
+        <p class="text">"Фонд создан для того, чтобы помочь как можно большему числу людей, вне
+          зависимости от
+          их места проживания, - сохранить и приумножить свои деньги, с предоставлением отличного Сервиса!</p>
+        <p class="text">Наша безопасная стратегия инвестирования и принцип «нетерпимости к убыткам», -
+          позволяют держать на балансе только самые надёжные, ликвидные, и эффективные глобальные бумаги, - с отличными
+          рейтингами, отчётами, и управлением.</p>
+        <p class="text">Доходность Фонда за 2020 год составила +73% в USD, что намного выше инфляции,
+          доходов от арендной недвижимости и банковских депозитов."</p>
+    </div>
+  </section>
+  <section class="fifth-section section">
     <div class="container">
       <h2 class="title toanimate" data-animate="animate__fadeInUp">Параметры Фонда</h2>
       <ul class="section-table toanimate" data-animate="animate__fadeInUp">
@@ -211,13 +242,13 @@
           <p class="cell table-text">Каждый понедельник</p>
         </li>
       </ul>
-      <button disabled class="download-pdf toanimate" data-delay="500" data-animate="fadeIn">
+      <button disabled class="download-pdf toanimate" data-delay="500" data-animate="fadeInUp">
         <img inline src="./src/icons/pdf.svg">
         <span>Ежемесячный отчет о результатах деятельности Фонда</span>
       </button>
     </div>
   </section>
-  <section class="seventh-section section">
+  <section class="sixth-section section">
     <div class="container">
       <h2 class="title toanimate" data-animate="animate__fadeInUp">Алгоритм инвестирования</h2>
       <div class="algorithms-container">
@@ -226,11 +257,11 @@
             1
           </p>
           <p class="algorithms-title">
-            Открыть брокерский счет в EXANTE
+            Открыть брокерский счёт в EXANTE
           </p>
           <p class="algorithms-descr">
             Регистрация по этой ссылке:
-            <a href="https://exante.eu/ru/#open-an-account"
+            <a href="https://exante.eu/p/15873/#open-an-account"
                target="_blank">https://exante.eu/p/15873/#open-an-account</a>
             сразу предоставит Вам персонального менеджера 24/7
           </p>
@@ -240,7 +271,7 @@
             2
           </p>
           <p class="algorithms-title">
-            Пополнить свой брокерский счет
+            Пополнить свой брокерский счёт
           </p>
           <p class="algorithms-descr">
             Не менее чем на 10 000 евро — минимум для открытия счета в EXANTE
@@ -260,11 +291,11 @@
       </div>
     </div>
   </section>
-  <section class="eighth-section section">
+  <section class="seventh-section section">
     <div class="container">
-      <h2 class="title toanimate" data-animate="animate__fadeInUp">Наши Преимущества</h2>
+      <h2 class="title toanimate" data-animate="animate__fadeInUp">Наши преимущества</h2>
       <div class="advantages-container">
-        <div class="advantages-item toanimate"  data-animate="animate__fadeInUp">
+        <div class="advantages-item toanimate" data-animate="animate__fadeInUp">
           <div class="advantage-icon">
             <img inline src="./src/icons/security.svg">
           </div>
@@ -288,9 +319,32 @@
           </div>
           <h3 class="advantage-title">Высокая ликвидность</h3>
           <p class="advantage-descr">Средства инвестируются только в ликвидные продукты, и поэтому заявки инвесторов по
-            выводу средств, выполняются в течение 5 дней</p>
+            выводу средств, выполняются <br> в течение 5 дней</p>
         </div>
-        <div class="advantages-item toanimate"data-delay="300" data-animate="animate__fadeInUp">
+        <div class="advantages-item toanimate" data-delay="300" data-animate="animate__fadeInUp">
+          <div class="advantage-icon">
+            <img inline src="./src/icons/fin.svg">
+          </div>
+          <h3 class="advantage-title">Безопасная стратегия</h3>
+          <p class="advantage-descr">Позволяет сохранять и приумножать капитал, как в периоды роста, так и в периоды
+            нестабильности</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="eighth-section mobile-section">
+    <div class="container">
+      <div class="advantages-container">
+        <div class="advantages-item toanimate"  data-animate="animate__fadeInUp">
+          <div class="advantage-icon">
+            <img inline src="./src/icons/week.svg">
+          </div>
+          <h3 class="advantage-title">Максимальный сервис</h3>
+          <p class="advantage-descr">Персональный менеджер 24/7, комплексные и бесплатные консультации Управляющего
+            Фондом, возможность инвестировать в Фонд от физического или юридического лица, находясь в любой точке
+            Мира</p>
+        </div>
+        <div class="advantages-item toanimate" data-delay="300" data-animate="animate__fadeInUp">
           <div class="advantage-icon">
             <img inline src="./src/icons/fin.svg">
           </div>
@@ -303,7 +357,7 @@
   </section>
   <section class="footer section">
     <div class="container">
-      <a href="#main" class="footer-title">
+      <a href="#ru" class="footer-title">
         <i>E</i>asy<i>G</i>ase <i>R</i>eal <i>E</i>state & <i>S</i>ecurities <i>I</i>nternational <i>F</i>und
       </a>
       <p class="footer-description">
@@ -355,19 +409,49 @@
           </ul>
         </div>
         <div class="footer-section footer-social">
-          <a href="https://facebook.com" target="_blank" class="social-link social-icon facebook">
+          <a href="https://www.facebook.com/EasyGase/" target="_blank" class="social-link social-icon facebook">
             <img inline src="./src/icons/facebook.svg">
           </a>
-          <a href="https://wa.me/447391127278" target="_blank" class="social-link whatsapp">
-            <span class="social-icon whatsapp">
-              <img inline src="./src/icons/whatsapp.svg">
-            </span>
-            Связаться в WhatsApp
+          <a href="https://wa.me/447391127278" target="_blank" class="social-link whatsapp-icon">
+            <img inline src="./src/icons/whatsapp.svg">
+            <span>Связаться в WhatsApp</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 </main>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J2C4QL0JD4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+
+  gtag('config', 'G-J2C4QL0JD4');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () {
+      (m[i].a = m[i].a || []).push(arguments)
+    };
+    m[i].l = 1 * new Date();
+    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+  })
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+  ym(71526976, "init", {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    webvisor: true,
+    ecommerce: "dataLayer"
+  });
+</script>
 </body>
 </html>

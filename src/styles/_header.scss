@@ -96,6 +96,7 @@ header {
   .container {
     @include phone {
       justify-content: unset;
+      padding: 0 5px;
     }
   }
 
@@ -147,7 +148,7 @@ header {
     text-transform: uppercase;
     font-family: 'Inter', sans-serif;
     @include phone {
-      font-size: 16px;
+      font-size: 14px;
     }
 
     svg {
@@ -160,9 +161,37 @@ header {
   &-item {
     margin-bottom: 30px;
     transition: $tr;
-    .social-icon {
-      margin-right: 0;
-      margin-left: 10px;
+    .social-link {
+      flex-direction: row-reverse;
+      svg {
+        margin: 0 0 0 5px;
+      }
+      span {
+        -webkit-animation: slideTextHeader 8s forwards infinite;
+        animation: slideTextHeader 8s forwards infinite;
+      }
+      @keyframes slideTextHeader {
+        0%, 75%, 100% {
+          max-width: 0;
+          transform: translateX(50px);
+        }
+        10%, 65% {
+          max-width: 170px;
+          transform: translateX(0);
+        }
+      }
+      @include phone {
+        @keyframes slideTextHeader {
+          0%, 75%, 100% {
+            max-width: 0;
+            transform: translateX(50px);
+          }
+          10%, 65% {
+            max-width: 150px;
+            transform: translateX(0);
+          }
+        }
+      }
     }
 
     &:hover {

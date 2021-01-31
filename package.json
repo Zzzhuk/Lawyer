@@ -40,7 +40,6 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "chart.js": "^2.9.4",
     "fullpage.js": "^3.0.9",
     "jquery": "^3.5.1",
     "mobile-detect": "^1.4.4",

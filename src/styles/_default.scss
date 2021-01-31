@@ -6,9 +6,10 @@ body, html {
   overflow-x: hidden;
   transition: $tr;
   color: #FFF;
+  background-color: #000;
   @include phone {
-    font-size: 16px;
-    line-height: 23px;
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 
@@ -20,6 +21,9 @@ body, html {
   max-width: 1200px;
   padding: 0 11px;
   margin: 0 auto;
+  @include phone {
+    padding: 0 15px;
+  }
 }
 
 .min-container {
@@ -31,14 +35,22 @@ body, html {
 .title {
   font-size: 32px;
   line-height: 39px;
-  font-weight: bold;
+  font-weight: 600;
   font-family: 'Inter', sans-serif;
+  @include phone {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .text {
   font-size: 16px;
   line-height: 26px;
   color: #FFF;
+  @include phone {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 h1, h2 {

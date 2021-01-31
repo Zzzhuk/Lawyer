@@ -33,9 +33,13 @@
     margin-left: 5px;
     text-shadow: 3px 3px 0px #f2f2f242;
 
+
     opacity: 0;
     @include phone {
       margin-top: 10px;
+      font-size: 16px;
+      line-height: 22px;
+      padding-left: 10px;
     }
 
     &.animated {
@@ -72,6 +76,24 @@
       font-style: normal;
       font-size: 70px;
     }
+
+    &.mob {
+      display: none;
+      font-size: 20px;
+      line-height: 28px;
+
+      i {
+        font-size: 26px;
+      }
+
+      @include phone {
+        display: block;
+      }
+    }
+
+    @include phone {
+      display: none;
+    }
   }
 }
 
@@ -97,22 +119,26 @@
   }
 }
 
-.second-section, .third-section, .fourth-section, .seventh-section {
+.second-section, .third-section, .fourth-section, .sixth-section {
   background: #000;
   background-size: cover;
   color: #fff;
-
-  .text {
-    margin-top: 25px;
-  }
-
-  .title {
-  }
 }
 
 .second-section {
   .title {
     margin-bottom: 62px;
+    @include phone {
+      margin-bottom: 22px;
+    }
+  }
+
+  .text {
+    @include phone {
+      &:not(.undertitle):nth-of-type(2), &:not(.undertitle):nth-of-type(3) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -124,6 +150,9 @@
     i {
       font-style: normal;
       font-size: 42px;
+      @include phone {
+        font-size: 24px;
+      }
     }
   }
 
@@ -131,15 +160,28 @@
     display: flex;
     justify-content: space-between;
     padding: 0;
+    @include phone {
+      display: block;
+    }
   }
 
   .fund-block {
     padding: 0 20px;
     flex: 1;
+    @include phone {
+      padding: 0 15px;
+    }
   }
 
   .text {
     margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0 !important;
+      @include phone {
+        margin-top: 20px !important;
+      }
+    }
 
     span {
       font-family: "Times New Roman";
@@ -154,13 +196,14 @@
     &.undertitle {
       font-size: 20px;
       line-height: 32px;
-    }
-
-    @include phone {
-      &:nth-of-type(3), &:nth-of-type(4) {
-        display: none;
+      margin-top: 75px;
+      @include phone {
+        font-size: 16px;
+        line-height: 26px;
+        margin-top: 20px;
       }
     }
+
   }
 }
 
@@ -168,76 +211,153 @@
   display: none;
 }
 
-.fourth-section {
+.fourth-section, .fourth-section-add {
   background-color: #000;
   color: #FFF;
 
   .container {
     @include flex-align-center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    padding: 0 20px;
     @include phone {
       align-items: stretch;
       flex-direction: column;
-      padding: 100px 11px;
+      padding: 100px 15px;
     }
   }
 
   .title {
     font-size: 32px;
     line-height: 39px;
-    font-weight: 700;
+    position: relative;
 
-    span {
+    &::after {
+      content: '';
       border-bottom: 3px solid $red;
-      padding-bottom: 20px;
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: -10px;
+      @include phone {
+        bottom: -5px;
+      }
     }
 
     @include phone {
+      padding-bottom: 10px;
       font-size: 16px;
       line-height: 26px;
+      width: auto;
+      display: inline-block;
+    }
+  }
+
+
+  .author {
+    padding: 0 20px;
+    position: relative;
+    margin-top: 30px;
+    //&::before {
+    //  display: block;
+    //  content: '';
+    //  position: absolute;
+    //  left: 0px;
+    //  height: 100%;
+    //  border-right: 3px solid $red;
+    //  top: 0;
+    //}
+    @include phone {
+      padding: 0 15px;
+    }
+
+    .text {
+      font-size: 15px;
+      line-height: 24px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include phone {
+        font-size: 14px;
+      }
+    }
+
+    @include phone {
+      display: none;
     }
   }
 
   .text {
     font-size: 20px;
     line-height: 32px;
-    margin-top: 40px;
+    margin-top: 20px;
+
+    &:first-of-type {
+      margin-top: 30px;
+    }
 
     span {
       font-size: 24px;
+      @include phone {
+        font-size: 16px;
+      }
     }
 
     @include phone {
       margin-top: 20px;
-      font-size: 16px;
-      line-height: 26px;
+      font-size: 14px;
+      line-height: 22px;
     }
   }
 
   &-description-container {
     flex: 1;
-    padding: 0 20px;
+    padding: 0 20px 0 20px;
     @include phone {
       order: 2;
+      padding: 0;
     }
   }
 
   &-photo-container {
     padding: 0 20px;
-    flex: 1;
     display: flex;
+    justify-content: flex-end;
 
     @include phone {
+      justify-content: flex-start;
       max-width: 100%;
       order: 1;
       margin-bottom: 10px;
       margin-top: -50px;
+      padding: 0;
     }
 
     img {
       width: 100%;
-      max-width: 400px;
+      max-width: 300px;
       border-radius: 4px;
+      margin-right: 20px;
+      @include phone {
+        max-width: 200px;
+        margin-right: 0;
+        min-width: unset;
+      }
     }
+  }
+}
+
+.fourth-section-add {
+  display: none;
+
+  .author {
+    display: block !important;
+  }
+
+  @include phone {
+    display: block;
   }
 }
 
@@ -248,6 +368,7 @@
   color: $red;
   margin-top: 10px;
   margin-left: 24px;
+  font-weight: bold;
 
   &:hover {
     color: #B8B8B8;
@@ -277,34 +398,40 @@
     @include phone {
       border-bottom: none;
       text-align: left;
+      font-size: 12px;
     }
   }
 
   @include phone {
-    align-items: flex-start;
+    align-items: center;
     margin-left: 0;
   }
 }
 
-.sixth-section {
+.fifth-section {
   background-color: #FFF;
   text-align: center;
 
   .title {
     color: $dark;
-    font-weight: 700;
     margin-bottom: 40px;
+    @include phone {
+      margin-bottom: 20px;
+    }
   }
 
   .container {
     padding: 0 24px;
     max-width: 1000px;
+    @include phone {
+      padding: 0 15px;
+    }
   }
 }
 
 .section-table {
   @include phone {
-    margin: 0 -11px;
+    margin: 0 -15px;
   }
 
   li {
@@ -316,8 +443,8 @@
     color: #535353;
 
     @include phone {
-      font-size: 14px;
-      padding: 15px;
+      font-size: 12px;
+      padding: 5px 15px;
       flex-direction: column;
     }
 
@@ -335,6 +462,7 @@
 
       @include phone {
         margin-right: 0;
+        margin-left: 0;
       }
     }
   }
@@ -342,14 +470,22 @@
   .table-text {
     color: $dark;
     font-weight: 700;
+    margin-left: 10px;
     @include phone {
       margin-top: 5px;
     }
   }
 }
 
-.seventh-section {
+.sixth-section {
   text-align: center;
+
+  .container {
+    padding: 0;
+    @include phone {
+      padding: 0 15px;
+    }
+  }
 }
 
 .algorithms-container {
@@ -357,10 +493,9 @@
   display: flex;
   flex-direction: column;
   @include phone {
-    margin-top: 40px;
+    margin-top: 60px;
     justify-content: unset;
     flex-direction: column;
-    align-items: center;
   }
 }
 
@@ -377,7 +512,10 @@
   }
 
   @include phone {
-    margin-bottom: 40px;
+    margin-top: 0;
+    margin-bottom: 60px;
+    max-width: 100%;
+    padding: 0;
   }
 }
 
@@ -412,8 +550,9 @@
 .algorithms-step-container {
   font-weight: 700;
   font-size: 200px;
-  font-family: 'Inter', sans-serif;
-  color: #535353;
+  font-family: sans-serif;
+  color: #323232;
+  opacity: .6;
   position: absolute;
   left: 16px;
   top: -30px;
@@ -428,6 +567,12 @@
     top: -66px;
     right: -26px;
   }
+
+  @include phone {
+    top: -15px;
+    left: 0;
+    font-size: 100px;
+  }
 }
 
 .algorithms-title {
@@ -436,10 +581,14 @@
   margin-bottom: 15px;
   font-weight: bold;
   font-family: 'Inter', sans-serif;
+  @include phone {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 5px;
+  }
 }
 
 .algorithms-descr {
-  color: $white;
 
   a {
     white-space: nowrap;
@@ -449,43 +598,82 @@
   }
 }
 
-.eighth-section {
-  background-color: #666666;
+.seventh-section, .eighth-section {
+  background: url("../img/bg-min.webp") no-repeat center center;
+  background-size: cover;
   color: #FFF;
   text-align: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .8);
+  }
 
   .title {
     margin-bottom: 40px;
   }
 
   .container {
-    padding: 0 24px;
+    position: relative;
+    padding: 0;
+    z-index: 10;
+    @include phone {
+      padding: 0 15px;
+    }
   }
 }
 
 .advantages-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
+
+  @include phone {
+    flex-direction: column;
+  }
 }
 
 .advantages-item {
   text-align: center;
   position: relative;
+  max-width: 50%;
   padding: 0 20px;
   width: 100%;
-  max-width: 50%;
   margin-bottom: 30px;
+  @include phone {
+    max-width: 100%;
+    padding: 0;
+    margin-bottom: 50px;
+    &:nth-last-of-type(2n+1) {
+      display: none;
+    }
+  }
 }
 
 .advantage-icon {
   display: flex;
   justify-content: center;
+
   svg {
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
     fill: #fff;
+    @include phone {
+      width: 60px;
+      height: 60px;
+    }
   }
 }
 
@@ -495,4 +683,18 @@
   font-weight: bold;
   line-height: 39px;
   margin-bottom: 15px;
+  @include phone {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.eighth-section {
+  display: none;
+
+  .advantages-item {
+    @include phone {
+      display: block !important;
+    }
+  }
 }
