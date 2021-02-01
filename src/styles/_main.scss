@@ -579,7 +579,7 @@
   font-size: 24px;
   line-height: 39px;
   margin-bottom: 15px;
-  font-weight: bold;
+  font-weight: 600;
   font-family: 'Inter', sans-serif;
   @include phone {
     font-size: 16px;
@@ -680,7 +680,7 @@
 .advantage-title {
   font-size: 24px;
   font-family: 'Inter', sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 39px;
   margin-bottom: 15px;
   @include phone {
