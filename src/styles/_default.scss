@@ -8,7 +8,7 @@ body, html {
   color: #FFF;
   background-color: #000;
   @include phone {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
   }
 }
@@ -38,7 +38,7 @@ body, html {
   font-weight: 600;
   font-family: 'Inter', sans-serif;
   @include phone {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 28px;
   }
 }
@@ -47,10 +47,6 @@ body, html {
   font-size: 16px;
   line-height: 26px;
   color: #FFF;
-  @include phone {
-    font-size: 14px;
-    line-height: 20px;
-  }
 }
 
 h1, h2 {

@@ -31,26 +31,8 @@ const plugins = [
         from: './src/favicon/',
         to: ''
       },
-      {
-        from: './src/videos/',
-        to: './videos/'
-      },
     ]
   })
-  // {
-  //   from: './src/favicon',
-  //   to: './favicon'
-  // },
-  // {
-  //   from: './src/img',
-  //   to: './img'
-  // },
-  // {
-  //   from: './src/videos',
-  //   to: './videos'
-  // }
-  //   ]
-  // }),
 ];
 module.exports = (env, options) => {
   const devMode = options.mode === 'development';

@@ -42,7 +42,7 @@
   margin-bottom: 49px;
 
   @include phone {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20px;
     margin-bottom: 5px;
   }
@@ -65,7 +65,7 @@
   margin-bottom: 20px;
   padding: 0 !important;
   @include phone {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 26px;
     margin-bottom: 5px;
   }
@@ -88,9 +88,6 @@
     &.contacts {
       padding: 0;
       font-size: 14px;
-      @include phone {
-        font-size: 12px;
-      }
     }
   }
 
@@ -127,9 +124,6 @@
   font-size: 14px;
   white-space: nowrap;
   color: $red;
-  @include phone {
-    font-size: 12px;
-  }
 }
 
 .facebook {
@@ -166,9 +160,6 @@
     -webkit-animation: slideTextFooter 8s forwards infinite;
     animation: slideTextFooter 8s forwards infinite;
   }
-  @include phone {
-    max-width: 205px;
-  }
 }
 
 @keyframes fadeIcon {
@@ -188,18 +179,6 @@
   10%, 65% {
     max-width: 170px;
     transform: translateX(0);
-  }
-}
-@include phone {
-  @keyframes slideTextFooter {
-    0%, 75%, 100% {
-      max-width: 0;
-      transform: translateX(-50px);
-    }
-    10%, 65% {
-      max-width: 150px;
-      transform: translateX(0);
-    }
   }
 }
 

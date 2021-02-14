@@ -4,21 +4,23 @@ import fullpage from 'fullpage.js';
 import MobileDetect from "mobile-detect"
 
 const md = new MobileDetect(window.navigator.userAgent),
-  mob = (md.mobile() || md.phone());
+  mob = (md.phone() || window.screen.width <= 768);
 
 const anchors = ['ru', 'fund', 'ceo', 'parameters', 'algorithm', 'advantages', 'communications'];
 if (mob) {
   anchors.splice(2, 0, 'investment');
   anchors.splice(4, 0, 'ceo-info');
   anchors.splice(8, 0, 'advantages-second');
-  $('.mobile-section').each(function (){
+  $('.mobile-section').each(function () {
     $(this).addClass('section')
   })
 }
+$(window).on('orientationchange', function (event) {
+  location.reload(true);
+});
 const fullPageInstance = new fullpage('#fullpage', {
   menu: '#headerMenu',
   scrollingSpeed: 500,
-  scrollOverflow: mob,
   anchors,
   afterLoad: function (origin, destination, direction) {
     if ($('.fp-section.active #video').get(0)) {
@@ -44,14 +46,21 @@ const fullPageInstance = new fullpage('#fullpage', {
 
 
 $(document).ready(function () {
-  $('#video').on("canplay", function() {
+  $('#video').on("loadedmetadata", function () {
     $("#preloader").fadeOut()
-    $(".main-section .title").each(function() {
+    $(".main-section .title").each(function () {
       $(this).addClass('animated');
     })
     $(".main-section .text").addClass('animated');
   });
-    $(".toggle, .header-menu").click(function () {
+  if ($('#video').prop('readyState') >= 2) {
+    $("#preloader").fadeOut()
+    $(".main-section .title").each(function () {
+      $(this).addClass('animated');
+    })
+    $(".main-section .text").addClass('animated');
+  }
+  $(".toggle, .header-menu").click(function () {
     $("#headerMenu").toggleClass("active");
     $("#toggleMenu").toggleClass("active");
     if ($("header").hasClass('active')) {

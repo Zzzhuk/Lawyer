@@ -4,6 +4,12 @@
   color: #fff;
   text-align: left;
 
+  .container {
+    @include phone {
+      margin-top: -25px;
+    }
+  }
+
   .fp-scroller {
     height: 100%;
   }
@@ -36,10 +42,11 @@
 
     opacity: 0;
     @include phone {
-      margin-top: 10px;
-      font-size: 16px;
+      margin-top: 35px;
+      font-size: 20px;
       line-height: 22px;
       padding-left: 10px;
+      margin-left: 0;
     }
 
     &.animated {
@@ -60,6 +67,10 @@
     text-shadow: 3px 3px 0px #73717175;
     max-width: 0;
 
+    @media screen and (max-width: 1024px){
+      font-size: 45px;
+    }
+
     &.animated {
       -webkit-animation: slideTitle 10s forwards infinite;
       -webkit-animation-delay: .5s;
@@ -75,15 +86,18 @@
     i {
       font-style: normal;
       font-size: 70px;
+      @media screen and (max-width: 1024px){
+        font-size: 60px;
+      }
     }
 
     &.mob {
       display: none;
-      font-size: 20px;
+      font-size: 24px;
       line-height: 28px;
 
       i {
-        font-size: 26px;
+        font-size: 28px;
       }
 
       @include phone {
@@ -146,7 +160,9 @@
   .title {
     font-family: "Times New Roman";
     text-transform: uppercase;
-
+    @include phone {
+      font-size: 20px;
+    }
     i {
       font-style: normal;
       font-size: 42px;
@@ -168,6 +184,19 @@
   .fund-block {
     padding: 0 20px;
     flex: 1;
+
+    .mob {
+      display: none;
+      @media only screen and (max-width: 1024px) and (min-width: 769px) {
+        display: block;
+      }
+    }
+    .hide-mob {
+      display: block;
+      @media only screen and (max-width: 1024px) and (min-width: 769px) {
+        display: none;
+      }
+    }
     @include phone {
       padding: 0 15px;
     }
@@ -179,6 +208,7 @@
     &:first-child {
       margin-top: 0 !important;
       @include phone {
+
         margin-top: 20px !important;
       }
     }
@@ -198,9 +228,12 @@
       line-height: 32px;
       margin-top: 75px;
       @include phone {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 26px;
         margin-top: 20px;
+        br {
+          display: none;
+        }
       }
     }
 
@@ -230,6 +263,7 @@
   .title {
     font-size: 32px;
     line-height: 39px;
+    font-weight: 500;
     position: relative;
 
     &::after {
@@ -240,16 +274,16 @@
       position: absolute;
       bottom: -10px;
       @include phone {
-        bottom: -5px;
+        bottom:-2px;
       }
     }
 
     @include phone {
-      padding-bottom: 10px;
-      font-size: 16px;
-      line-height: 26px;
+      font-size: 22px;
+      line-height: 28px;
       width: auto;
       display: inline-block;
+      margin-top: 10px;
     }
   }
 
@@ -280,7 +314,14 @@
       }
 
       @include phone {
-        font-size: 14px;
+        font-size: 16px;
+        line-height: 26px;
+        svg {
+          width: 20px;
+          fill: $red;
+          transform: scaleY(-1);
+          vertical-align: text-bottom;
+        }
       }
     }
 
@@ -296,19 +337,22 @@
 
     &:first-of-type {
       margin-top: 30px;
+      @include phone {
+        margin-top: 15px;
+      }
     }
 
     span {
       font-size: 24px;
       @include phone {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
 
     @include phone {
       margin-top: 20px;
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 26px;
     }
   }
 
@@ -340,9 +384,12 @@
       max-width: 300px;
       border-radius: 4px;
       margin-right: 20px;
+      max-height: 450px;
       @include phone {
         max-width: 200px;
         margin-right: 0;
+        max-height: 300px;
+        height: 100%;
         min-width: unset;
       }
     }
@@ -386,6 +433,10 @@
     width: 20px;
     margin-right: 14px;
 
+    @include phone {
+      width: 28px;
+    }
+
     path {
       transition: $tr;
       fill: $red;
@@ -398,13 +449,14 @@
     @include phone {
       border-bottom: none;
       text-align: left;
-      font-size: 12px;
+      font-size: 14px;
     }
   }
 
   @include phone {
     align-items: center;
     margin-left: 0;
+    margin-top: 30px;
   }
 }
 
@@ -443,7 +495,7 @@
     color: #535353;
 
     @include phone {
-      font-size: 12px;
+      font-size: 14px;
       padding: 5px 15px;
       flex-direction: column;
     }
@@ -493,7 +545,7 @@
   display: flex;
   flex-direction: column;
   @include phone {
-    margin-top: 60px;
+    margin-top: 70px;
     justify-content: unset;
     flex-direction: column;
   }
@@ -570,8 +622,8 @@
 
   @include phone {
     top: -15px;
-    left: 0;
-    font-size: 100px;
+    font-size: 110px;
+    opacity: 1;
   }
 }
 
@@ -582,24 +634,29 @@
   font-weight: 600;
   font-family: 'Inter', sans-serif;
   @include phone {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 26px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 }
 
 .algorithms-descr {
 
+  @include phone {
+    line-height: 26px;
+    br {
+      display: none;
+    }
+  }
+
   a {
-    white-space: nowrap;
-    display: block;
     transition: $tr;
     color: $red
   }
 }
 
 .seventh-section, .eighth-section {
-  background: url("../img/bg-min.webp") no-repeat center center;
+  background: url("https://easygase-cdn.b-cdn.net/images/bg-min.JPG") no-repeat center center;
   background-size: cover;
   color: #FFF;
   text-align: center;
@@ -616,11 +673,14 @@
     height: 100%;
     width: 100%;
     z-index: 1;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .7);
   }
 
   .title {
     margin-bottom: 40px;
+    @include phone {
+      margin-bottom: 20px;
+    }
   }
 
   .container {
@@ -655,6 +715,10 @@
     max-width: 100%;
     padding: 0;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     &:nth-last-of-type(2n+1) {
       display: none;
     }
@@ -669,7 +733,7 @@
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
-    fill: #fff;
+    fill: $red;
     @include phone {
       width: 60px;
       height: 60px;
@@ -684,8 +748,9 @@
   line-height: 39px;
   margin-bottom: 15px;
   @include phone {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 26px;
+    margin-bottom: 10px;
   }
 }
 
@@ -694,7 +759,7 @@
 
   .advantages-item {
     @include phone {
-      display: block !important;
+      display: flex !important;
     }
   }
 }
